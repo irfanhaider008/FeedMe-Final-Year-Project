@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PhoneAuth"
+    android:background="@drawable/gradient">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_gravity="center_horizontal"
+        android:textSize="50dp"
+        android:layout_marginBottom="30dp"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="100dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/spl"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="Enter Your phone number..."
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <Spinner
+            android:id="@+id/spinnerCountries"
+            android:layout_width="120dp"
+            android:layout_height="40dp" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:digits="0123456789"
+            android:hint="enter your number"
+            android:inputType="phone"
+            android:maxLength="10" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonContinue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_round"
+        android:layout_gravity="center_horizontal"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/btnhelp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/help" />
+
+</LinearLayout>

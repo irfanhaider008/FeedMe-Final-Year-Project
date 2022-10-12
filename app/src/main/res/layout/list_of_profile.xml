@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E86"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ppprofile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/tvppname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                android:hint="Name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnedit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/edit"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btndelete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/delete"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvptitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Title.."
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvpost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Post.." />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/whiteround"
+                    android:drawableLeft="@drawable/sortupnormal"
+                    android:drawablePadding="-20dp"
+                    android:gravity="center"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btndown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/whiteround"
+                    android:capitalize="none"
+                    android:drawableLeft="@drawable/sortdownnormal"
+                    android:drawablePadding="-10dp"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

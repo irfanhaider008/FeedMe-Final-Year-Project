@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:text="Create New Post"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etposttitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/button_round"
+            android:hint="Post Title..." />
+
+        <EditText
+            android:id="@+id/etpost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_round"
+            android:hint="Create a new Post.."
+            android:inputType="text|textMultiLine"
+            android:lines="5" />
+        <EditText
+            android:id="@+id/posthouse"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="phone"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_round"
+            android:hint="House #" />
+        <EditText
+            android:id="@+id/poststreet"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:inputType="phone"
+            android:background="@drawable/button_round"
+            android:hint="Street #" />
+        <Spinner
+            android:id="@+id/postpo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_round"
+            android:entries="@array/Colony" />
+        <Spinner
+            android:id="@+id/postcity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:entries="@array/City"
+            android:background="@drawable/button_round" />
+        <Button
+            android:id="@+id/btnpostdone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_round"
+            android:text="Done"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</LinearLayout>

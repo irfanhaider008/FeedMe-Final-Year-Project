@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F54D46">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="@color/cardview_light_background"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="?attr/colorError" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageprofile"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/profile" />
+
+                    <TextView
+                        android:id="@+id/tvUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:enabled="false"
+                        android:hint="Name"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imagerate"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top|right"
+                        android:src="@drawable/w" />
+
+                    <TextView
+                        android:id="@+id/tvrating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginRight="10dp"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+                <TextView
+                    android:id="@+id/tvDisc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:enabled="false"
+                    android:hint="Discription"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btneditinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_round"
+                        android:text="Edit Profile"
+                        android:textAllCaps="false" />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btndonor"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/button_round"
+                        android:text="Become a Donor" />
+
+                    <Button
+                        android:id="@+id/btnworker"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/button_round"
+                        android:text="Become a Worker"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnpost"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_round"
+                    android:text="Post"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/cardview_light_background"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/postheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="Your Posts"
+                android:textColor="@color/cardview_light_background"
+                android:visibility="invisible" />
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/WProfilerecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible">
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:background="@drawable/gradient">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_signup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:fontFamily="cursive"
+            android:text="Sign Up"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageprofile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/profile"
+                android:layout_gravity="center_horizontal"/>
+            <Button
+                android:id="@+id/btnselectprofile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="220dp"
+                android:background="@android:drawable/ic_menu_camera" />
+
+        </FrameLayout>
+
+
+        <EditText
+            android:id="@+id/signup_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:drawableRight="@drawable/name"
+            android:hint="Username"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:drawableRight="@drawable/email"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/signup_house"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:inputType="phone"
+            android:drawableRight="@drawable/home"
+            android:hint="House #" />
+        <EditText
+            android:id="@+id/signup_street"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:inputType="phone"
+            android:drawableRight="@drawable/address"
+            android:hint="Street #" />
+        <Spinner
+            android:id="@+id/signup_po"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:drawableRight="@drawable/address"
+            android:entries="@array/Colony" />
+        <Spinner
+            android:id="@+id/signup_city"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:entries="@array/City"
+            android:drawableRight="@drawable/address" />
+
+        <EditText
+            android:id="@+id/signup_cnic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:drawableRight="@drawable/cnic"
+            android:hint="CNIC"
+            android:inputType="phone"
+            android:maxLength="15" />
+
+        <Button
+            android:id="@+id/btn_signup_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_round"
+            android:text="Done"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+</ScrollView>
